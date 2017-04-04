@@ -21,7 +21,7 @@ def get_m_all(username,limit) :
                 solutionPage = requests.get('http://codeforces.com/contest/'+str(contest_id[i])+'/submission/'+str(problem_id[i]))
                 tree2 = html.fromstring(solutionPage.text)
                 code = tree2.xpath('//*[@id="pageContent"]/div[3]/pre/text()')
-                inp = 'solutions//p'+str(k)+'.txt' 
+                inp = 'CFsol//solutions//p'+str(k)+'.txt' 
                 f=open(inp,'w')
                 sys.stdout = f
                 for j in code:
