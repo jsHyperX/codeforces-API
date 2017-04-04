@@ -16,7 +16,7 @@ def get_m_all(username,limit) :
 
         k=1
 
-        for i in range(len(verdict)):
+        for i in range(len(status)):
             if status[i] == 'Accepted':
                 solutionPage = requests.get('http://codeforces.com/contest/'+str(contest_id[i])+'/submission/'+str(problem_id[i]))
                 tree2 = html.fromstring(solutionPage.text)
